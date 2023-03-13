@@ -174,10 +174,10 @@ const DeleteCanvas=async()=>{
             )}
           </div>
 
-          <h2 className="font-bold lg:text-2xl md:text-xl text-lg lg:ml-24 ml-16 mt-5">
+          <h2 className=" break-words font-bold lg:text-2xl md:text-xl text-lg lg:ml-24 ml-16 mt-5">
             {data?.name}
           </h2>
-          <h3 className=" lg:text-lg md:text-base text-md lg:ml-24 ml-16 mt-5">
+          <h3 className=" break-words lg:text-lg md:text-base text-md lg:ml-24 ml-16 mt-5">
             {data?.description}
           </h3>
         </div>

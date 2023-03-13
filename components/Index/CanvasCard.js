@@ -4,7 +4,7 @@ import React from "react";
 export default function CanvasCard({item}) {
   return (
     <div className="border shadow-lg bg-primary lg:px-10 px-5 py-5 rounded-lg text-white w-full">
-      <div className="flex items-center gap-4">
+      <div className="flex items-center gap-4 ">
         <div className="">
           <img
             alt="profile"
@@ -20,9 +20,11 @@ export default function CanvasCard({item}) {
           <p className="text-sm md:text-md lg:text-base">{item?.created_at.substring(0, 10)}</p>
         </div>
       </div>
-      <h2 className="font-bold lg:text-2xl md:text-xl text-lg lg:ml-24 ml-16 mt-5">{item?.name}</h2>
-      <h3 className=" lg:text-lg md:text-base text-md lg:ml-24 ml-16 mt-5">{item?.description}</h3>
-      <div className="flex justify-end">
+      <div >
+      <h2 className="font-bold lg:text-2xl md:text-xl text-lg lg:ml-24 ml-16 mt-5  break-words">{item?.name}</h2>
+      <p className=" lg:text-lg md:text-base text-md lg:ml-24 ml-16 mt-5   break-words">{item?.description}</p>
+      </div>
+      <div className="flex justify-end ">
       <Link
           href={{
             pathname: "/canvas/[slug]",
