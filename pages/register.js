@@ -66,7 +66,7 @@ export default function Register() {
         <title>Register - Volit</title>
       </Head>
 
-      <section className="md:bg-gray-100">
+      <section className="">
         <div className="w-full min-h-screen flex justify-center items-center container-sk">
           <div className="border-2 rounded-lg lg:w-1/2 md:w-4/5 w-full lg:p-20 md:p-10 p-5 bg-white">
             <h1 className="font-display text-center lg:text-5xl md:text-4xl text-3xl font-bold">
