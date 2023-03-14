@@ -35,7 +35,11 @@ export default function Register() {
         setLoading(false);
         toast.success("Account Created Successfully ! Please Login.");
 
-        router.push("/login");
+        router.push("/");
+        setCookie("user", data?.user, {
+          path: "/",
+          maxAge: 60 * 60 * 24 * 7, // 1 week
+        });
       } 
       else if(status===401){
         toast.dismiss(loading);
