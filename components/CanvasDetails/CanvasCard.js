@@ -111,7 +111,7 @@ const DeleteCanvas=async()=>{
         toast.dismiss(loading);
 
         toast.success("Canvas updated successfully!");
-        const slug = testData?.name;
+        const slug = name;
         router.push(`/canvas/${slug}`);
         setEdit(false);
       } else {
