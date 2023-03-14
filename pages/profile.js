@@ -68,12 +68,12 @@ export default function profile() {
         });
         toast.dismiss(loading);
         setLoading(false);
-        toast.success("Logged in Successfully !");
+        toast.success("Profile updated Successfully !");
 
         // router.push("/");
       } else {
         toast.dismiss(loading);
-        toast.error("Login Failed! Username or Password doesn't match.");
+        toast.error("Provided data is wrong");
         setLoading(false);
       }
     } catch (error) {
@@ -82,10 +82,10 @@ export default function profile() {
       setLoading(false);
       if (status === 401) {
         toast.dismiss(loading);
-        toast.error("Please provide your right credentials");
+        toast.error("Provided data is wrong");
       } else {
         toast.dismiss(loading);
-        toast.error("Login Failed!");
+        toast.error("Provided data is wrong!");
       }
     }
   };

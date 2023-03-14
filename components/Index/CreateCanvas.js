@@ -63,7 +63,7 @@ export default function CreateCanvas({ token }) {
     }
   };
   return (
-    <div className="border-2 lg:p-10 p-5 mb-5 rounded-md bg-primary">
+    <div className="border-2 lg:p-10 p-5 mb-5 rounded-2xl bg-primary">
       <h5 className="font-display lg:text-3xl  md:text-2xl text-xl font-bold text-white text-center">
         Create a canvas
       </h5>

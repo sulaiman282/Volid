@@ -3,7 +3,7 @@ import React from "react";
 
 export default function CanvasCard({item}) {
   return (
-    <div className="border shadow-lg bg-primary lg:px-10 px-5 py-5 rounded-lg text-white w-full">
+    <div className="border shadow-lg bg-primary lg:px-10 px-5 py-5 rounded-2xl text-white w-full">
       <div className="flex items-center gap-4 ">
         <div className="">
           <img
@@ -21,8 +21,8 @@ export default function CanvasCard({item}) {
         </div>
       </div>
       <div >
-      <h2 className="font-bold lg:text-2xl md:text-xl text-lg lg:ml-24 ml-16 mt-5  break-words">{item?.name}</h2>
-      <p className=" lg:text-lg md:text-base text-md lg:ml-24 ml-16 mt-5   break-words">{item?.description}</p>
+      <h2 className="font-bold lg:text-2xl md:text-xl text-lg lg:ml-24 ml-16 mt-5  break-words"><span className="font-normal ">Canvas Name:</span> {item?.name}</h2>
+      <p className=" lg:text-lg md:text-base text-md lg:ml-24 ml-16 mt-5   break-words"><span className="font-normal ">Canvas description : </span>{item?.description}</p>
       </div>
       <div className="flex justify-end ">
       <Link
@@ -30,7 +30,7 @@ export default function CanvasCard({item}) {
             pathname: "/canvas/[slug]",
             query: { slug: item?.name },
           }}
-        className="text-right border-2 hover:bg-primary2 duration-300 px-3 py-2 font-display lg:text-xl md:text-lg text-base mt-3">Read More</Link>
+        className="text-right rounded-2xl border-2 hover:bg-primary2 duration-300 px-3 py-2 font-display lg:text-xl md:text-lg text-base mt-3">Read More</Link>
       </div>
     </div>
   );

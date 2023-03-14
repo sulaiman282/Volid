@@ -1,6 +1,7 @@
 import React, { useState,useEffect } from "react";
 import Link from "next/link";
 import { useCookies } from "react-cookie";
+import axios from "axios";
 export default function Header() {
   const [cookie, setCookie, removeCookie] = useCookies(["user"]);
   const [userData, setUserData] = useState(cookie?.user);
@@ -13,6 +14,43 @@ export default function Header() {
   useEffect(() => {
     setUserData(cookie?.user);
   }, [cookie, setUserData]);
+
+
+
+  useEffect(() => {
+    axios
+      .get(`${process.env.NEXT_PUBLIC_API_URL}/user/`, {
+        headers: {
+          "Content-Type": "application/json",
+          "X-Requested-With": "XMLHttpRequest",
+          Authorization: `Token ${userData?.token}`,
+        },
+      })
+      .then((response) => {
+        console.log(response);
+      
+
+        const { status, data } = response;
+        if (status === 200) {
+          setCookie("user", data?.user, {
+            path: "/",
+            maxAge: 60 * 60 * 24 * 7, // 1 week
+          });
+       
+        } else {
+          removeCookie("user", { path: "/" });
+    setUserData(null);
+        }
+      })
+      .catch((error) => {
+        removeCookie("user", { path: "/" });
+    setUserData(null);
+      });
+  }, []);
+
+
+
+
 
   return (
     <>

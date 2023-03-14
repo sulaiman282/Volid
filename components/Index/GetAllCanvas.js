@@ -14,7 +14,7 @@ export default function GetAllCanvas({ data }) {
   }, [cookie, setUserData]);
 
   return (
-    <div className="container-sk lg:py-20 md:py-10 py-5 flex flex-col gap-4">
+    <div className="container-sk lg:py-20 md:py-10 py-5 flex flex-col lg:gap-8 gap-4">
       <SearchBox />
 
       {userData?.token && <CreateCanvas token={userData?.token} />}
