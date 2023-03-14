@@ -60,7 +60,7 @@ export default function profile() {
         },
       });
       const { status, data } = res;
-      console.log(res);
+      // console.log(res);
       if (status === 200) {
         setCookie("user", data?.user, {
           path: "/",
