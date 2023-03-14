@@ -14,7 +14,7 @@ export default function GetAllCanvas({ data }) {
   }, [cookie, setUserData]);
 
   return (
-    <div className="container-sk lg:py-20 md:py-10 py-5 flex flex-col lg:gap-8 gap-4">
+    <div className="container-sk   py-5 flex flex-col lg:gap-8 gap-4">
       <SearchBox />
 
       {userData?.token && <CreateCanvas token={userData?.token} />}
@@ -28,7 +28,7 @@ export default function GetAllCanvas({ data }) {
             onClick={() => {
               setCount(count + 10);
             }}
-            className="bg-primary hover:bg-primary2 duration-300 px-3 py-3 rounded-md lg:text-lg md:text-base text-md text-white font-bold w-fit"
+            className="bg-primary hover:bg-primary2 duration-300 px-3 py-3 mb-5 rounded-md lg:text-lg md:text-base text-md text-white font-bold w-fit"
           >
             Load&nbsp;More
           </button>

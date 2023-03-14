@@ -95,12 +95,12 @@ export default function profile() {
       <Head>
         <title>My Profile - Volit</title>
       </Head>
-      <div className="container-sk lg:py-20 py-10">
+      <div className="container-sk lg:py-20 py-10 ">
         <h1 className="lg:text-4xl md:text-3xl text-2xl font-display font-bold tracking-wide text-center">
           My Profile
         </h1>
 
-        <div className="my-5 lg:w-1/2 mx-auto">
+        <div className="my-5 lg:w-1/2 mx-auto bg-white p-5 rounded-xl">
           <Formik
             enableReinitialize
             initialValues={{
@@ -243,7 +243,7 @@ export default function profile() {
                 <button
                   type="submit"
                   disabled={loading}
-                  className="w-full py-3 bg-primary hover:bg-primary2 duration-300 text-white mt-4 rounded-md font-display lg:text-xl md:text-lg text-base font-bold tracking-wide"
+                  className="w-full py-3 bg-primary hover:bg-blue-900 duration-300 text-white mt-4 rounded-md font-display lg:text-xl md:text-lg text-base font-bold tracking-wide"
                 >
                   Update
                 </button>

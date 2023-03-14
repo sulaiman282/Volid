@@ -125,7 +125,7 @@ export default function CreateCanvas({ token }) {
               <button
                 disabled={loading}
                 type="submit"
-                className="hover:font-bold mt-3 lg:text-lg md:text-base text-md hover:shadow-lg duration-300 bg-white text-primary hover:text-primary2  border  lg:w-1/5 md:w-2/5 w-1/2 py-3 tracking-widest rounded-lg"
+                className="hover:font-bold mt-3 lg:text-lg md:text-base text-md hover:shadow-lg duration-300 bg-blue-700  text-white hover:bg-blue-900    lg:w-1/5 md:w-2/5 w-1/2 py-3 tracking-widest rounded-lg"
               >
                 Post Canvas
               </button>

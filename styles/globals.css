@@ -42,7 +42,14 @@
 
 body{
   scroll-behavior: smooth !important;
-  background-color: rgb(238, 238, 238);
+  background-image: url('/1.jpg');
+
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+
+
 }
 
 

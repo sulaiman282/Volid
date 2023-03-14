@@ -55,7 +55,7 @@ export default function Header() {
   return (
     <>
  
-      <div className="md:h-20  h-16 bg-primary border-b-2 border-white"  >
+      <div className="md:h-20  h-16 bg-primary border-b border-white"  >
       <div className="container-sk flex items-center h-full p-2 justify-between">
         <Link href="/" className="hover:text-red-700 duration-300 text-white">
           <h1 className="font-display lg:text-5xl md:text-4xl text-3xl font-bold ">

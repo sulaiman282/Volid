@@ -31,9 +31,9 @@ export default function ChoiceList() {
   }, []);
 
   return (
-    <div className="my-5 flex flex-col gap-4">
+    <div className="my-5 flex flex-col gap-4 mt-10">
       {choiceList?.map((item, index) => (
-        <div key={index} className="border rounded-md ">
+        <div key={index} className="border rounded-md bg-white">
           <div className="px-5 py-10">
             <Inputfield item={item} userData={userData} slug={slug} />
           </div>

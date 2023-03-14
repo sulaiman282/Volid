@@ -70,7 +70,7 @@ export default function CreateChoice({ data }) {
     }
   };
   return (
-    <div className="mt-5 border rounded-md p-5">
+    <div className="mt-5 bg-[#ECECED]  ">
       <textarea
         id="w3review"
         rows="5"
@@ -78,13 +78,13 @@ export default function CreateChoice({ data }) {
         maxLength="160"
         value={text1}
         onChange={(e) => setText1(e.target.value)}
-        className="w-full focus:outline-none focus:border-none border-none rounded-md border-gray-700 mt-5 px-3  py-2"
-        placeholder="Enter Descriotion Here"
+        className="w-full focus:outline-none focus:border-none border-none rounded-md border-gray-700 p-5"
+        placeholder="Enter description about choice"
       />
-      <div className="flex justify-end mt-3">
+      <div className="flex justify-end  p-5">
         <button
           onClick={() => CreateChoice()}
-          className="bg-primary text-white hover:bg-primary2 px-3 py-2 rounded-lg duration-300 lg:text-xl md:text-lg text-base font-bold font-display "
+          className="bg-blue-700 text-white hover:bg-blue-900 px-3 py-2 rounded-lg duration-300 lg:text-xl md:text-lg text-base font-bold font-display "
         >
           Post Choice
         </button>

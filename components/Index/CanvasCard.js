@@ -30,7 +30,7 @@ export default function CanvasCard({item}) {
             pathname: "/canvas/[slug]",
             query: { slug: item?.name },
           }}
-        className="text-right rounded-2xl border-2 hover:bg-primary2 duration-300 px-3 py-2 font-display lg:text-xl md:text-lg text-base mt-3">Read More</Link>
+        className="text-right rounded-2xl border-2 hover:bg-blue-900 duration-300 px-3 py-2 font-display lg:text-xl md:text-lg text-base mt-3">Read More</Link>
       </div>
     </div>
   );

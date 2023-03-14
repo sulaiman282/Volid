@@ -27,7 +27,7 @@ export default function SearchBox() {
                   },
                 }}
               >
-<button   className="lg:text-lg md:text-base text-md absolute top-1/2 right-0 -translate-y-1/2 mr-4 hover:shadow-lg duration-300 bg-white text-primary hover:text-primary2 h-4/5 border px-3 rounded-lg">Search</button>
+<button   className="lg:text-lg md:text-base text-md absolute top-1/2 right-0 -translate-y-1/2 mr-4 hover:shadow-lg duration-300 bg-blue-700  text-white hover:bg-blue-900 h-4/5 border px-3 rounded-lg">Search</button>
 
               </Link>
       
