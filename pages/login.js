@@ -31,7 +31,7 @@ cookie.user?.token && router.push("/");
         { user: { username, password } }
       );
       const { status, data } = res;
-      // console.log(res);
+      console.log(res);
       if (status === 200) {
    
         
@@ -50,8 +50,9 @@ cookie.user?.token && router.push("/");
         setLoading(false);
       }
     } catch (error) {
+      console.log(error);
       const { status } = error?.response;
-      //console.log(error);
+    
       setLoading(false);
       if (status === 401) {
         toast.dismiss(loading);
