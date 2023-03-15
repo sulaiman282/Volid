@@ -14,15 +14,14 @@ export default function CanvasCard({item}) {
         </div>
 
         <div>
-          <p className="text-md md:text-base lg:text-lg font-semibold hover:text-red-700">
-          <Link href={`/canvas/user/${item?.creator?.username}`}> {item?.creator?.username}</Link>
-           
+          <p className="text-md md:text-base lg:text-lg font-semibold">
+            {item?.creator?.username}
           </p>
           <p className="text-sm md:text-md lg:text-base">{item?.created_at.substring(0, 10)}</p>
         </div>
       </div>
       <div >
-      <h2 className="font-bold lg:text-2xl md:text-xl text-lg lg:ml-24 ml-16 mt-5  break-words"><span className="font-normal ">Canvas Name:</span>  {item?.name}</h2>
+      <h2 className="font-bold lg:text-2xl md:text-xl text-lg lg:ml-24 ml-16 mt-5  break-words"><span className="font-normal ">Canvas Name:</span> {item?.name}</h2>
       <p className=" lg:text-lg md:text-base text-md lg:ml-24 ml-16 mt-5   break-words"><span className="font-normal ">Canvas description : </span>{item?.description}</p>
       </div>
       <div className="flex justify-end ">

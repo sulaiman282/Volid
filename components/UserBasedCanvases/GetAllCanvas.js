@@ -1,13 +1,17 @@
 import React, { useState, useEffect } from "react";
 import CanvasCard from "./CanvasCard";
-import SearchBox from "./SearchBox";
-import CreateCanvas from "./CreateCanvas";
+import { useRouter } from 'next/router';
+
+
+ 
+
 import { useCookies } from "react-cookie";
 export default function GetAllCanvas({ data }) {
   const [cookie, setCookie, removeCookie] = useCookies(["user"]);
   const [userData, setUserData] = useState(cookie?.user);
   const [count, setCount] = useState(10);
-
+  const router = useRouter();
+  const { slug } = router.query;
   // console.log("data from server side ", data);
   useEffect(() => {
     setUserData(cookie?.user);
@@ -15,9 +19,9 @@ export default function GetAllCanvas({ data }) {
 
   return (
     <div className="container-sk   py-5 flex flex-col lg:gap-8 gap-4">
-      <SearchBox />
-
-      {userData?.token && <CreateCanvas token={userData?.token} />}
+  
+<h1 className="text-center text-2xl md:text-3xl lg:text-4xl font-bold font-display"><span className="bg-primary px-3 rounded-full text-white">{slug}</span></h1>
+  
       {data?.map((item, index) => (
         <div key={index}>{index <= count && <CanvasCard item={item} />}</div>
       ))}

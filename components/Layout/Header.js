@@ -27,7 +27,7 @@ export default function Header() {
         },
       })
       .then((response) => {
-        console.log(response);
+        // console.log(response);
       
 
         const { status, data } = response;
@@ -76,11 +76,15 @@ export default function Header() {
             />
 
             <div className="   absolute bottom-0 translate-y-full left-0 -translate-x-full lg:ml-16 ml-12  z-40 group-hover:block hidden">
-              <div className="mt-3 bg-white border shadow-lg rounded p-2 flex flex-col gap-3 " >
+              <div className="mt-3 bg-white border shadow-lg rounded p-5 flex flex-col gap-3 " >
               
               {userData?.token  && (
                 <Link href="/profile">
                 <p className=" hover:text-red-700 duration-300">My&nbsp;Profile</p>
+              </Link>  )}
+              {userData?.token  && (
+                <Link href={`/canvas/user/${userData?.username}  `}>
+                <p className=" hover:text-red-700 duration-300">My&nbsp;Canvases</p>
               </Link>  )}
               {userData?.token  && (
                 <p className=" hover:text-red-700 duration-300 cursor-pointer"  onClick={()=>Logoutfun()}>Logout</p>  )}
